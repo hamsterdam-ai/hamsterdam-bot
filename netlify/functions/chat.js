@@ -13,10 +13,10 @@ export async function handler(event) {
       "Content-Type": "application/json",
       "Authorization": "Bearer " + apiKey
     },
-    body: JSON.stringify({
-      model: "mistral/mistral-7b-instruct",
-      messages
-    })
+   body: JSON.stringify({
+  model: "openchat/openchat-3.5:free",
+  messages
+})
   });
 
   const data = await res.json();
