@@ -18,7 +18,7 @@
   <div id="output"></div>
 
   <script>
-    const apiKey = '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';
+    const apiKey = import.meta.env.OPENROUTERKEY;
     async function generate() {
       const prompt = document.getElementById("prompt").value;
       document.getElementById("output").innerText = "Generating... 🍷";
