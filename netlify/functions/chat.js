@@ -15,7 +15,7 @@ export async function handler(event) {
         "Authorization": "Bearer " + apiKey
       },
       body: JSON.stringify({
-        model: "openchat/openchat-3.5:free",
+        model: "mistralai/mistral-7b-instruct:free",
         messages
       })
     });
