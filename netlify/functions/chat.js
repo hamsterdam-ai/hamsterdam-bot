@@ -1,7 +1,7 @@
 export async function handler(event) {
   try {
     const { prompt } = JSON.parse(event.body);
-    const apiKey = process.env.OPENROUTER_KEY;
+    const apiKey = process.env.OPENROUTERKEY;
 
     const messages = [
       { role: "system", content: "You are a sultry, creative erotic storyteller. Your stories are poetic, descriptive, and deeply seductive. Avoid anything illegal or involving real people." },
