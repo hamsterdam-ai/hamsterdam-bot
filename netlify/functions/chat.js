@@ -3,10 +3,16 @@ export async function handler(event) {
     const { prompt } = JSON.parse(event.body);
     const apiKey = process.env.OPENROUTERKEY;
 
-    const messages = [
-      { role: "system", content: "You are a sultry, creative erotic storyteller. Your stories are poetic, descriptive, and deeply seductive. Avoid anything illegal or involving real people." },
-      { role: "user", content: `Write a detailed erotic short story based on this scenario:\n${prompt}` }
-    ];
+const messages = [
+  {
+    role: "system",
+    content: `You are an unapologetically erotic storyteller. You write explicit, detailed adult fiction that is steamy, graphic, and immersive. You avoid real people and illegal topics, but otherwise go as far as the prompt desires. Push boundaries. Use vivid descriptions of physical sensation, lust, and desire. No holding back.`
+  },
+  {
+    role: "user",
+    content: `Write a highly detailed erotic story based on this scenario:\n${prompt}`
+  }
+];
 
     const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
@@ -15,7 +21,7 @@ export async function handler(event) {
         "Authorization": "Bearer " + apiKey
       },
       body: JSON.stringify({
-        model: "mistralai/mistral-7b-instruct:free",
+        model: "gryphe/mythomist-7b:free"
         messages
       })
     });
