@@ -21,7 +21,7 @@ export async function handler(event) {
         "Authorization": "Bearer " + apiKey
       },
       body: JSON.stringify({
-        model: "gryphe/mythomist-7b:free",
+        model: "mistralai/mistral-7b-instruct:free"
         messages
       })
     });
